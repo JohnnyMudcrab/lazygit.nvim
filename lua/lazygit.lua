@@ -92,7 +92,7 @@ local function lazygit(path)
     end
   else
     if fn.isdirectory(path) then
-      cmd = cmd .. " -p " .. path
+      cmd = "cd " .. path .. " && " .. cmd
     end
   end
 
