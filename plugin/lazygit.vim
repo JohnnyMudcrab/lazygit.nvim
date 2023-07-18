@@ -38,7 +38,7 @@ let g:lazygit_use_custom_config_file_path = 0
 " path to custom config file
 let g:lazygit_config_file_path = ''
 
-command! LazyGit lua require'lazygit'.lazygit()
+command! -nargs=* LazyGit lua require'lazygit'.lazygit(<f-args>)
 
 command! LazyGitCurrentFile lua require'lazygit'.lazygitcurrentfile()
 
